@@ -210,6 +210,16 @@ Looking for files to turn in....
 
 __REQUIRED assignment files__ will be turned in __automatically__ without prompt! if you get a prompt like `Turn in ./.bash_logout?  [yes/no]`, the file is certainly not part of assignment. You should always say NO unless you really want to upload the file. 
 
+### Microsoft Windows
+
+If you are on a Microsoft Windows machine, unless you have `cygwin` installed, most of the UNIX commands are inaccessable for you. But you still need UNIX commands when you SSH into your lab computer. For SSH, an alternative to OpenSSH is Putty, which have a graphical user interface for you to fill in the address. Click "Open" and it will prompt you the user to login into. 
+
+If you wish to copy files, an alternative to `scp` is WinSCP, which also have a graphical user interface and features a FTP like experence. Just google the software and install them. The submission process is the same because the commands are executed on a remote computer, not in your windows machine. 
+
+### Congradulations!
+
+Now I want to write a tutorial about SSH without password, using public key authentication. 
+
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
