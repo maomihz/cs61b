@@ -6,7 +6,7 @@ These days I heard a lot of people around asking about problems about the submis
 
 I do not mind copying my work, and improvements are expected. There may also be some problem with the language. If you use GitHub and are willing to help me write other instructions or improve this, please tell me. 
 
-__Some of the topics explained may *NOT* apply to a Microsoft Windows computer! (See Mirosoft Windows below)__
+__Some of the topics explained may *NOT* apply to a Microsoft Windows computer! (See Mirosoft Windows section below)__
 
 ### Introduction to lab's computer
 
