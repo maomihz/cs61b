@@ -73,10 +73,29 @@ To see what is your __working directory__, type `pwd`:
 $ pwd
 /Users/maomi/Documents/workspace/cs61b/Documents
 ```
-This is a complete form of your working directory. My home directory is `/Users/maomi`, so the directory can be abbreviated to `~/Documents/workspace/cs61b/Documents`.
+This is a complete form of your working directory. My home directory is `/Users/maomi/`, so the directory can be abbreviated to `~/Documents/workspace/cs61b/Documents`.
 
+In each folder, there is two special folders, the `.` and `..`. `.` means the __current folder__, and `..` means the current folder's __parent folder__. The paths shown by using `.` and `..` is called __relative path__ and the path start with `/` is called __absolute path__. So if our current working directory is `~/Documents/workspace/cs61b/Documents`, and I want to list the content of the parent folder: 
+```
+$ ls ../
+Documents
+LICENSE
+README.md
 
+$ ls ~/Documents/workspace/cs61b/
+Documents
+LICENSE
+README.md
 
+$ ls ../../
+FishMimic	PaperDown	cs61b
+
+$ ls ~/Documents/workspace/
+FishMimic	PaperDown	cs61b
+
+```
+
+Note that path starting with `~` is also relative path.
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
