@@ -77,6 +77,9 @@ This is a complete form of your working directory. My home directory is `/Users/
 
 In each folder, there is two special folders, the `.` and `..`. `.` means the __current folder__, and `..` means the current folder's __parent folder__. The paths shown by using `.` and `..` is called __relative path__ and the path start with `/` is called __absolute path__. So if our current working directory is `~/Documents/workspace/cs61b/Documents`, and I want to list the content of the parent folder: 
 ```
+$ pwd
+/Users/maomi/Documents/workspace/cs61b/Documents
+
 $ ls ../
 Documents
 LICENSE
