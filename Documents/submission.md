@@ -4,7 +4,7 @@ __For cs61bl students__
 
 These days I heard a lot of people around asking about problems about the submission process and ssh. Those are all unix stuff, but most people are not used to Unix, so there may be wierd things happen like why I cannot copy files to the lab computer or why I submit a long list of files. In this post, I will try to explain all the concepts to help ease this summer's learning. Feel free to ask me any questions. BTW, I'm a student in Alice's section. 
 
-I do not mind copying my work, and improvements are expected. If you use GitHub and are willing to help me write other instructions or improve this, please tell me. 
+I do not mind copying my work, and improvements are expected. There may also be some problem with the language. If you use GitHub and are willing to help me write other instructions or improve this, please tell me. 
 
 __Some of the topics explained may *NOT* apply to a Microsoft Windows computer! (See Mirosoft Windows below)__
 
