@@ -42,7 +42,7 @@ You have successfully logined remotely to your computer!!! For lab's computer, t
 
 This is a confusing part. When you have a lab session, you typically go to the website(`cs61bl.github.io`), download the files, drag into `eclipse`, and start working. And then you will have all the trouble about where is the files you saved, because you have to copy the files and submit them! But do you remember when you first opened eclipse, a dialog prompted you to select the workspace? __Remember all the files inside eclipse is on your workspace folder you set.__ If you don't know where your workspace is, open up eclipse and click `File` -> `Switch Workspace` -> `other`
 
-After you finished working, all the modified files are saved in the eclipse workspace. I recommend you open the eclipse workspace before submission and drag or copy all the files you need to submit (Shown on the start of every lab section, DO NOT include .class files, .DS_Store files, and .project files!) to a seperate folder. (On your Desktop, for example) It will be helpful for your further work!
+After you finished working, all the modified files are saved in the eclipse workspace. __I recommend you open the eclipse workspace before submission and drag or copy all the files you need to submit (Shown on the start of every lab section, DO NOT include redundent files for it will prompt you a long list of files to submit!)__ to a seperate folder. (On your Desktop, for example) It will be helpful for your further work!
 
 Now it comes the challenging part: `scp` command. First of all, we will learn about how unix organize files in a filesystem (This applys to Mac and Linux. For windows, see the alternative method but when you are working remotely over SSH, you do need the knowledge.) and various Unix commands you will encounter.
 
@@ -169,7 +169,44 @@ COMMIT_EDITMSG                                100%   14     0.0KB/s   00:00
 
 __REMEMBER__ we must use -r option to copt a whole directory!
 
+Now I assume you have put all your files you want to submit in a folder on Desktop called lab01: `~/Desktop/lab02/`, and inside we have only required files: 
+```
+$ ls ~/Desktop/lab01/
+DateConverter.java
+TriangleDrawer.java
+CheckDigit.java
+AddingMachine.java
+AddingMachine.readme
+```
 
+The command to copy all the files to lab computer's Desktop is:
+```
+$ scp -r ~/Desktop/lab01/ cs61bl-**@torus.cs.berkeley.edu:~/Desktop/
+......
+```
+
+I hope I explained everything needed!
+
+### submit your work
+
+Now that the files you want to submit is already on the lab computer's `~/Desktop/` folder. Either `ssh` and login with your account (see "SSH to your machine" section above") or go to the lab and login to one of the computers. You will see the folder appeared on your desktop magically. The `submit` command work like this: `submit ASSIGN`, where task is the name of the assignment like `lab01, lab02, lab03`. Notice the argument of `submit` is __NOT__ a path!! (The assignment name allowed is pre-defined by the professor) `submit` does not run with no argument. It will submit all the files in the current __Working Directory__, so check your working directory (`pwd`) before submitting!!
+
+```
+$ cd ~/Desktop/lab02/
+
+$ pwd
+/home/cc/cs61bl/su15/class/cs61bl-xx/Desktop/lab02
+
+$ submit lab02
+Please enter the logins of your partner(s), if any.
+Enter '.' to stop.
+Login: .
+You have no partners, correct? [yes/no] yes
+Created MY.PARTNERS file.
+Looking for files to turn in....
+```
+
+__REQUIRED assignment files__ will be turned in __automatically__ without prompt! if you get a prompt like `Turn in ./.bash_logout?  [yes/no]`, the file is certainly not part of assignment. You should always say NO unless you really want to upload the file. 
 
 -
 
