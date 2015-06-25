@@ -67,6 +67,16 @@ drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Templates
 drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Videos
 drwxr-xr-x 6 maomi cs61bl 4096 Jun 23 18:36 workspace
 ```
+
+To see what is your __working directory__, type `pwd`:
+```
+$ pwd
+/Users/maomi/Documents/workspace/cs61b/Documents
+```
+This is a complete form of your working directory. My home directory is `/Users/maomi`, so the directory can be abbreviated to `~/Documents/workspace/cs61b/Documents`.
+
+
+
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
