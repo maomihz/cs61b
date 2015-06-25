@@ -44,7 +44,9 @@ This is a confusing part. When you have a lab session, you typically go to the w
 
 After you finished working, all the modified files are saved in the eclipse workspace. I recommend you open the eclipse workspace before submission and drag or copy all the files you need to submit (Shown on the start of every lab section, DO NOT include .class files, .DS_Store files, and .project files!) to a seperate folder. (On your Desktop, for example) It will be helpful for your further work!
 
-Now it comes the challenging part: `scp` command. First of all, we will learn about how unix organize files in a filesystem (This applys to Mac and Linux. For windows, see the alternative method but when you are working remotely over SSH, you do need the knowledge.) Every user have a __home directory__, which is represented by "~". You can open up a Terminal and try the commands: 
+Now it comes the challenging part: `scp` command. First of all, we will learn about how unix organize files in a filesystem (This applys to Mac and Linux. For windows, see the alternative method but when you are working remotely over SSH, you do need the knowledge.) and various Unix commands you will encounter.
+
+Every user have a __home directory__, which is represented by "~". You can open up a Terminal and try the commands: 
 
 ```
 $ ls ~
@@ -154,6 +156,20 @@ funstuff
 ./Documents:
 README.md	submission.md
 ```
+
+Finally, let's learn `scp`. `scp` means "Secure Copy", which use the `ssh` protocol to send files, so the syntax is pretty similar to `ssh`: `scp /local/file/or/directory user@address:/remote/directory`. For example, to copy folder `~/Documents/workspace/cs61b/` to remote computers folder `~/Documents`, login with account maomi, we use:
+```
+$ scp ~/Documents/workspace/cs61b/ maomihz@maomihz.com:~/Documents/
+/Users/maomi/Documents/workspace/cs61b: not a regular file
+
+$ scp -r ~/Documents/workspace/cs61b/ maomihz@maomihz.com:~/Documents
+COMMIT_EDITMSG                                100%   14     0.0KB/s   00:00
+......
+```
+
+__REMEMBER__ we must use -r option to copt a whole directory!
+
+
 
 -
 
