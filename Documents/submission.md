@@ -24,7 +24,15 @@ So can we use an USB disk to copy the files? Of course you can!(You will find no
 
 `ssh` is a program installed on Unix and Mac computers by default. SSH means 'secure shell', and shell is a program that interpret the commands you give to the computer and run certain programs. (Like Siri, who interpret what you say and do certain task). Using `ssh`, you can __remotely__ login to a computer and open a shell program, so you have all the control power for a computer over the network. But what's different from a remote desktop is SSH does not allow graphical windows to open across the network! So you need to type commands to operate the remote computer. ~~(Of course X11 tunnel can do this)~~ Don't be afraid of typing commands! This is the coolest thing a computer science student can do! 
 
-SSH is secure because all the network traffic is encrypted. 
+SSH is secure because all the network traffic is encrypted. To open a SSH session, open Terminal in your computer and type `ssh -V` to see if everything works. The output in my computer is `OpenSSH_6.2p2, OSSLShim 0.9.8r 8 Dec 2011`
+
+The basic syntax of `ssh` command is `ssh user@address`. For example, you want to open an ssh session to `192.168.1.1` and login with user account `maomi`, you type `ssh maomi@192.168.1.1` and hit enter. It will prompt you password. As you type, the characters __WON'T__' show up on the screen and when you finished typing, just press enter. 
+
+Now you will get a message like this: 
+```
+Last login: Sun Jun 21 21:50:25 2015 from 75-147-140-162-sfba.hfc.comcastbusiness.net
+[maomi@maomihz.com ~]# 
+```
 
 -
 
