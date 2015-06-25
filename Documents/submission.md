@@ -130,6 +130,30 @@ $ pwd
 
 Here I will give you a trick: if you are on a mac and you want to open Finder to explore your current working directory, just type `open .` and a Finder window will appear. Of course you can type `open ~` to open your home directory, and `open /etc/` to open some wierd directorys. 
 
+The last command before scp is the `mv` command. `mv` means "move", and besides moving files and directories, `mv` can rename a file or a directory on the command line. The command is also pretty straightforward, Example: 
+```
+$ ls
+Data Structures and Algorithms in Java, 6th Edition.pdf
+Documents
+LICENSE
+README.md
+
+$ mv LICENSE funstuff
+$ ls
+Data Structures and Algorithms in Java, 6th Edition.pdf
+Documents
+README.md
+funstuff
+
+$ mv README.md Documents/
+$ ls -R
+Data Structures and Algorithms in Java, 6th Edition.pdf
+Documents
+funstuff
+
+./Documents:
+README.md	submission.md
+```
 
 -
 
