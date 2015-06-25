@@ -68,14 +68,14 @@ drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Videos
 drwxr-xr-x 6 maomi cs61bl 4096 Jun 23 18:36 workspace
 ```
 
-To see what is your __working directory__, type `pwd`:
+To see what is your __working directory__, type `pwd`, which means "Print Working Directory":
 ```
 $ pwd
 /Users/maomi/Documents/workspace/cs61b/Documents
 ```
 This is a complete form of your working directory. My home directory is `/Users/maomi/`, so the directory can be abbreviated to `~/Documents/workspace/cs61b/Documents`.
 
-In each folder, there is two special folders, the `.` and `..`. `.` means the __current folder__, and `..` means the current folder's __parent folder__. The paths shown by using `.` and `..` is called __relative path__ and the path start with `/` is called __absolute path__. So if our current working directory is `~/Documents/workspace/cs61b/Documents`, and I want to list the content of the parent folder: 
+In each folder, there is two special folders, the `./` and `../`. `./` means the __current folder__, and `../` means the current folder's __parent folder__. The paths shown by using `./` and `../` is called __relative path__ and the path start with `/` is called __absolute path__. So if our current working directory is `~/Documents/workspace/cs61b/Documents`, and I want to list the content of the parent folder: 
 ```
 $ pwd
 /Users/maomi/Documents/workspace/cs61b/Documents
@@ -98,7 +98,39 @@ FishMimic	PaperDown	cs61b
 
 ```
 
-Note that path starting with `~` is also relative path.
+Note that path starting with `~` is also relative path. Paths ending with `/` is usually a folder, although sometimes omitting the trailing `/` is allowed: 
+```
+$ ls ..
+Documents
+LICENSE
+README.md
+```
+
+How do you change your working directory? There is a command called `cd`, which means "Change (working) Directory". The command is pretty staightforward: 
+```
+$ pwd
+/Users/maomi/Documents/workspace/cs61b/Documents
+
+$ cd ..
+$ pwd
+/Users/maomi/Documents/workspace/cs61b
+
+$ cd ..
+$ pwd
+/Users/maomi/Documents/workspace
+
+$ cd cs61b/
+$ pwd
+/Users/maomi/Documents/workspace/cs61b
+
+$ cd ~
+$ pwd
+/Users/maomi
+```
+
+Here I will give you a trick: if you are on a mac and you want to open Finder to explore your current working directory, just type `open .` and a Finder window will appear. Of course you can type `open ~` to open your home directory, and `open /etc/` to open some wierd directorys. 
+
+
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
