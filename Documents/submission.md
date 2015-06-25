@@ -2,7 +2,9 @@
 
 __For cs61bl students__
 
-These days I heard a lot of people around asking about problems about the submission process and ssh. Those are all unix stuff, but most people are not used to Unix, so there may be wierd things happen like why I cannot copy files to the lab computer or why I submit a long list of files. In this post, I will try to explain all the concepts to help ease this summer's learning. I will not have illustrations but feel free to ask me any questions. BTW, I'm a student in Alice's section. 
+These days I heard a lot of people around asking about problems about the submission process and ssh. Those are all unix stuff, but most people are not used to Unix, so there may be wierd things happen like why I cannot copy files to the lab computer or why I submit a long list of files. In this post, I will try to explain all the concepts to help ease this summer's learning. Feel free to ask me any questions. BTW, I'm a student in Alice's section. 
+
+I do not mind copying my work, and improvements are expected. If you use GitHub and are willing to help me write other instructions or improve this, please tell me. 
 
 __Some of the topics explained may *NOT* apply to a Microsoft Windows computer! (See Mirosoft Windows below)__
 
@@ -36,6 +38,35 @@ Last login: Sun Jun 21 21:50:25 2015 from 75-147-140-162-sfba.hfc.comcastbusines
 
 You have successfully logined remotely to your computer!!! For lab's computer, there will be a bunch of messages show up, giving you some warnings like process running for 24 hours will be killed and infomations like disk quota. Then there is a shell __prompt__ telling you to enter commands. Don't mix up your local terminal and remote shell! Once you sshed to a remote server, you should type `exit` logout to return to your own computer. 
 
+### scp your files
+
+This is a confusing part. When you have a lab session, you typically go to the website(`cs61bl.github.io`), download the files, drag into `eclipse`, and start working. And then you will have all the trouble about where is the files you saved, because you have to copy the files and submit them! But do you remember when you first opened eclipse, a dialog prompted you to select the workspace? __Remember all the files inside eclipse is on your workspace folder you set.__ If you don't know where your workspace is, open up eclipse and click `File` -> `Switch Workspace` -> `other`
+
+After you finished working, all the modified files are saved in the eclipse workspace. I recommend you open the eclipse workspace before submission and drag or copy all the files you need to submit (Shown on the start of every lab section, DO NOT include .class files, .DS_Store files, and .project files!) to a seperate folder. (On your Desktop, for example) It will be helpful for your further work!
+
+Now it comes the challenging part: `scp` command. First of all, we will learn about how unix organize files in a filesystem (This applys to Mac and Linux. For windows, see the alternative method but when you are working remotely over SSH, you do need the knowledge.) Every user have a __home directory__, which is represented by "~". You can open up a Terminal and try the commands: 
+
+```
+$ ls ~
+Desktop    Downloads  Pictures  Templates  workspace
+Documents  Music      Public    Videos
+```
+
+`ls` is a program that lists directory content. Without an argument(parameter), `ls` will list the contents of __working directory__. To have a more detailed listing, use `ls -l`:
+
+```
+$ ls -l ~
+total 36
+drwxr-xr-x 3 maomi cs61bl 4096 Jun 23 18:37 Desktop
+drwxr-xr-x 4 maomi cs61bl 4096 Jun 23 18:47 Documents
+drwxr-xr-x 2 maomi cs61bl 4096 Jun 23 18:37 Downloads
+drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Music
+drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Pictures
+drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Public
+drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Templates
+drwxr-xr-x 2 maomi cs61bl 4096 Jun 22 18:54 Videos
+drwxr-xr-x 6 maomi cs61bl 4096 Jun 23 18:36 workspace
+```
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
