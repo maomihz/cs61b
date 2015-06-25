@@ -34,6 +34,8 @@ Last login: Sun Jun 21 21:50:25 2015 from 75-147-140-162-sfba.hfc.comcastbusines
 [maomi@maomihz.com ~]# 
 ```
 
+You have successfully logined remotely to your computer!!! For lab's computer, there will be a bunch of messages show up, giving you some warnings like process running for 24 hours will be killed and infomations like disk quota. Then there is a shell __prompt__ telling you to enter commands. Don't mix up your local terminal and remote shell! Once you sshed to a remote server, you should type `exit` logout to return to your own computer. 
+
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
