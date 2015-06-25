@@ -10,5 +10,5 @@ Q: why we need an account to login to the lab computer?
 
 -
 
-![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
+<span style="text-align:right">![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)</span>
 
