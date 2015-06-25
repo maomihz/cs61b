@@ -22,7 +22,7 @@ The central server is open to the Internet, so if you have an account, you can a
 
 So can we use an USB disk to copy the files? Of course you can!(You will find no place to plug in your USB disk though.) But there is a smart way to this: we use `scp`, as explained below, to remotely copy files __over the network__.
 
-### SSH to your machine
+### SSH To Your Machine
 
 `ssh` is a program installed on Unix and Mac computers by default. SSH means 'secure shell', and shell is a program that interpret the commands you give to the computer and run certain programs. (Like Siri, who interpret what you say and do certain task). Using `ssh`, you can __remotely__ login to a computer and open a shell program, so you have all the control power for a computer over the network. But what's different from a remote desktop is SSH does not allow graphical windows to open across the network! So you need to type commands to operate the remote computer. ~~(Of course X11 tunnel can do this)~~ Don't be afraid of typing commands! This is the coolest thing a computer science student can do! 
 
@@ -38,7 +38,9 @@ Last login: Sun Jun 21 21:50:25 2015 from 75-147-140-162-sfba.hfc.comcastbusines
 
 You have successfully logined remotely to your computer!!! For lab's computer, there will be a bunch of messages show up, giving you some warnings like process running for 24 hours will be killed and infomations like disk quota. Then there is a shell __prompt__ telling you to enter commands. Don't mix up your local terminal and remote shell! Once you sshed to a remote server, you should type `exit` logout to return to your own computer. 
 
-### scp your files
+### `scp` Your Files
+
+__WARNING__: This section is long and covers lots of UNIX topic. I hope you can read that to improve your knowledge about UNIX. 
 
 This is a confusing part. When you have a lab session, you typically go to the website(`cs61bl.github.io`), download the files, drag into `eclipse`, and start working. And then you will have all the trouble about where is the files you saved, because you have to copy the files and submit them! But do you remember when you first opened eclipse, a dialog prompted you to select the workspace? __Remember all the files inside eclipse is on your workspace folder you set.__ If you don't know where your workspace is, open up eclipse and click `File` -> `Switch Workspace` -> `other`
 
@@ -187,7 +189,7 @@ $ scp -r ~/Desktop/lab01/ cs61bl-**@torus.cs.berkeley.edu:~/Desktop/
 
 I hope I explained everything needed!
 
-### submit your work
+### Submit Your Work
 
 Now that the files you want to submit is already on the lab computer's `~/Desktop/` folder. Either `ssh` and login with your account (see "SSH to your machine" section above") or go to the lab and login to one of the computers. You will see the folder appeared on your desktop magically. The `submit` command work like this: `submit ASSIGN`, where task is the name of the assignment like `lab01, lab02, lab03`. Notice the argument of `submit` is __NOT__ a path!! (The assignment name allowed is pre-defined by the professor) `submit` does not run with no argument. It will submit all the files in the current __Working Directory__, so check your working directory (`pwd`) before submitting!!
 
