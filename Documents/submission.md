@@ -22,6 +22,10 @@ So can we use an USB disk to copy the files? Of course you can!(You will find no
 
 ### SSH to your machine
 
+`ssh` is a program installed on Unix and Mac computers by default. SSH means 'secure shell', and shell is a program that interpret the commands you give to the computer and run certain programs. (Like Siri, who interpret what you say and do certain task). Using `ssh`, you can __remotely__ login to a computer and open a shell program, so you have all the control power for a computer over the network. (But what's different from a remote desktop is SSH does not allow graphical windows to open across the network. ) ~~I do know X11 tunneling!~~
+
+SSH is secure because all the network traffic is encrypted. 
+
 -
 
 ![Creative Commons](https://i.creativecommons.org/l/by/4.0/88x31.png)
