@@ -218,7 +218,7 @@ If you wish to copy files, an alternative to `scp` is WinSCP, which also have a 
 
 ### Congradulations!
 
-Now I want to write a tutorial about SSH without password, using public key authentication. I will upload this first. Thank you for your reading!
+Enjoy your course!
 
 -
 
