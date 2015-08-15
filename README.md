@@ -12,4 +12,6 @@ Password: I will not tell you.
 
 ## Resources for you
 
-Work hard and practice often. 
+Work hard and practice often.
+ 
+That's a great way to learn. 
